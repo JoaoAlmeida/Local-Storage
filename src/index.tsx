@@ -3,11 +3,12 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
+import AppRouter from './router/AppRouter';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './theme/styles.css'
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <AppRouter />,
   document.getElementById('root')
 );
 
