@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -44,7 +44,7 @@ const BookForm = (props) => {
     const { name, value } = event.target;
     switch (name) {
       case 'quantity':
-        if (value === '' || parseInt(value) === value) {
+        if (value === '' || parseInt(value) === +value) {
           setBook((prevState) => ({
             ...prevState,
             [name]: value
@@ -72,51 +72,51 @@ const BookForm = (props) => {
       {errorMsg && <p className="errorMsg">{errorMsg}</p>}
       <Form onSubmit={handleOnSubmit}>
         <Form.Group controlId="name">
-          <Form.Label>Book Name</Form.Label>
+          <Form.Label>Nome do Livro</Form.Label>
           <Form.Control
             className="input-control"
             type="text"
             name="bookname"
             value={bookname}
-            placeholder="Enter name of book"
+            placeholder="Digite o nome do livro"
             onChange={handleInputChange}
           />
         </Form.Group>
         <Form.Group controlId="author">
-          <Form.Label>Book Author</Form.Label>
+          <Form.Label>Autor</Form.Label>
           <Form.Control
             className="input-control"
             type="text"
             name="author"
             value={author}
-            placeholder="Enter name of author"
+            placeholder="Digite o nome do autor"
             onChange={handleInputChange}
           />
         </Form.Group>
         <Form.Group controlId="quantity">
-          <Form.Label>Quantity</Form.Label>
+          <Form.Label>Quantidade</Form.Label>
           <Form.Control
             className="input-control"
             type="number"
             name="quantity"
             value={quantity}
-            placeholder="Enter available quantity"
+            placeholder="Quantidade disponível deste livro"
             onChange={handleInputChange}
           />
         </Form.Group>
         <Form.Group controlId="price">
-          <Form.Label>Book Price</Form.Label>
+          <Form.Label>Preço</Form.Label>
           <Form.Control
             className="input-control"
             type="text"
             name="price"
             value={price}
-            placeholder="Enter price of book"
+            placeholder="Digite o preço do livro"
             onChange={handleInputChange}
           />
         </Form.Group>
         <Button variant="primary" type="submit" className="submit-btn">
-          Submit
+          Submeter
         </Button>
       </Form>
     </div>

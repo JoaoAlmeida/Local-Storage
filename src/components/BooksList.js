@@ -16,7 +16,7 @@ const BooksList = ({ books, setBooks }) => {
             <Book key={book.id} {...book} handleRemoveBook={handleRemoveBook} />
           ))
         ) : (
-          <p className="message">No books available. Please add some books.</p>
+          <p className="message">Não há livros disponíveis. Por favor, adicione algum livro.</p>
         )}
       </div>
     </React.Fragment>

@@ -7,11 +7,11 @@ const Header = () => {
       <hr />
       <div className="links">
         <NavLink to="/list" className="link" activeClassName="active" exact>
-          Books List
+          Lista de Livros
         </NavLink>
         <br></br><br></br>
         <NavLink to="/add" className="link" activeClassName="active">
-          Add Book
+          Adicionar Livro
         </NavLink>
       </div>
     </header>
